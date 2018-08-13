@@ -1,0 +1,70 @@
+1. Einleitung
+Was ist Bike-Sharing? --
+Wieso verbreiten sich BSS so schnell?  --
+Wie groß ist der Markt für Bike-Sharing? (Anzahl an aktiven BSS)
+Wie haben sich BSS entwickelt? --
+Was für Arten von BSS gibt es und welche Unterschiede zu denen gibt es? -- (GPS in Fahrrad bei Ofo wobei Citybike ohne GPS)
+Welche Vorteile bieten BSS-Systeme (Dockless/Dock)? (Erweiterung des bestehenden ) --
+Welche Nachteile bringen BSS mitsich? (Vandalismus, Diebstahl, Dockless Bikes?)
+Zukünftige Entwicklungen hinsichtlich BSS?
+
+NEUES UNTERKAPITEL?
+Zu berücksichtigende Faktoren bei der Umsetzung eines BSS
+
+Welche Faktoren haben Einfluss auf die Benutzbarkeit eines BSS? ( wetter, )  
+Was für Kosten fallen bei BSS an? (Kapitalkosten vs Operative kosten)
+Wir können Kosten in BSS minimiert werden?
+
+>Nicht beeinflussbare Umgebungsvariablen: (bestehende Infrastruktur, Wetter, Bevölkerungsdichte)
+>Beeinflussbare Faktoren (Optimierungsproblem): 
+-- Stationenverteilung
+-- Stationengröße
+-- Stationbefüllung
+-- Umverteilung (statisch, dynamisch)
+-- Psychologie der Menschen
+> Was sind Zielkonflikte die bei der Umsetzung von BSS auftreten können? (SLA, Budget...)
+> Welche KPIs sind für die Performanzmessung relevant? 
+
+ 
+
+
+=============================================1.2 Related Work============================================== 
+Wieso bekommen BSS so viel Aufmerksamkeit seitens der wissenschaftlichen Community?  
+Welche unterschiedliche Kategorien gibt hinsichtlich der Related Work? 
+Auf welche Kategorie der Arbeiten wird näher eingegangen? (ML) 
+
+==> 1.2.1 Allgemein
+________________________________________________________________________________________________________
+________________Bike-sharing: History, Impacts, Models of Provision, and Future_________________________
+________________________________________________________________________________________________________
+> Womit beschäftigt sich die Arbeit?
+> Wann sind die ersten BSS entstanden? 
+> Was sind die Models of Provision?
+________________________________________________________________________________________________________
+_____________How to promote sustainable public bike system from a psychological perspective?____________
+________________________________________________________________________________________________________
+> Welche psychologischen Faktoren spielen eine Rolle?
+> Beschäftigen sich viele Artikel mit "psychologischen Faktoren"?
+> Kann die Nutzung von BSS durch gezielte Kampagnen beeinflusst werden?
+________________________________________________________________________________________________________
+_____________Bike-share rebalancing strategies, patterns, and purpose___________________________________
+________________________________________________________________________________________________________
+> Was wird in dieser Arbeit untersucht?
+> In welchen Disziplinen werden BSS als Untersuchungsgegenstand herangezogen?
+> Was ist ein Outage? 
+> Wann kommen die meisten Outages vor?
+> Wie werden Stationen in unterschiedlichen BSS rebalanziert? 
+> Welche Optimierungsmechanismen werden von Anbietern genutzt?
+> Kommen SLAs bei jedem BSS zum Einsatz? 
+> Was sind die Kosten für einen Operator um ein Fahrrad zu transportieren? 
+
+==> 1.2.2 Mathematische Optimierung
+________________________________________________________________________________________________________
+
+
+
+
+
+
+
+

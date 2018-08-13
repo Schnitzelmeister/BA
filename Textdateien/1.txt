@@ -1,0 +1,46 @@
+-> Jira				 // PASST
+-> Confluence			 // PASST
+-> Testrail			 // PASST
+-> TOAD/SQL Developer (DWH-User) // FEHLT
+-> Cognos 			 // PASST
+
+SPOC (single point of contact) Schnittstelle zu TMA
+
+0. -> HLS (TSA + TMA => produzieren abstrakte Beschreibung der zu implmentierenden Lösung)
+
+1. -> HLD durchlesen (fachliche Beschreibung) SPOC
+
+2. -> LLD durchlesen (technische Beschreibungen) Anhand von HLD wird die LLD erstellt
+   --> Entwicklung der CREATE ...
+   --> Entwicklung findet innerhalb einer Dev-Umgebung statt (weniger Daten, inkonsistent)
+
+3. -> Deployment auf Prodlc (PRODLIKE)
+
+4. -> Testcases erstellen
+   --> Gabi erstellt Tescases
+   --> Tester setzen Testcases um
+   
+CONFLUENCE:
+   --> zu testenden BR: BR-22
+
+________________________________________________________________________________________________
+
+Handover - Development to Test (DWH Reiter)
+         --> Übergabe von Developer an Tester
+
+NEXT-STEPS: 
+	 --> Sobald die nötigen Berechtigung verfügbar sind mit Gabi sprechen um einen Testcase
+	 --> durchzuführen.
+	 --> Tutorial mit Gönül
+           ---> BR-22 HLD und LLD lesen
+	   ---> Testkonzept anfragen (BR-22) und lesen
+
+Abnahmeumgebung = Prodlike = Prodlc
+
+
+
+
+
+
+
+

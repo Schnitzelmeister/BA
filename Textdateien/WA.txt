@@ -152,6 +152,7 @@ Zu visualisieren/untesuchen:
 2d Graph der Anzahl an Räder im System (Räder/Zeit)
 2d Graph Auslastung (Woche)
 2d Graph Auslastung (Tag)
+Durchschnittliche Fahrtdauer je Jahr
 Mappe mit gefärbten Punkten die Stationen zeigen (meisten Abfahrten)
 Mappe mit gefärbten Punkten die Stationen zeigen (meisten Ankünfte)
 Spatial distribution der Fahrräder als Heatmap?(Anzahl pro Docking-Station)

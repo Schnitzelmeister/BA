@@ -20,6 +20,9 @@ groups = df.groupby('Team')
 #3. Extract the group you want, the extracted group is a dataframe
 devils = groups.get_group('Devils')
 
+#Aggregation auf Gruppierung
+aggregation_devils = devils['Spalte'].agg(np.aggregatFunktion)
+
 #Example Query
 import seaborn as sns
 
@@ -43,3 +46,8 @@ df['starttime'].apply(lambda x: x.date())
 
 #get number of unique values in column
 df['trip_id'].nunique
+
+#Resizing Figures
+fig_size = plt.rcParams["figure.figsize"]
+fig_size[0] = 10.0
+fig_size[1] = 7.0

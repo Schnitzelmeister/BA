@@ -5,3 +5,4 @@ In welchen Bereichen wird Pandas verwendet? (finance, economics, Statistics, ana
 Was sind die Features von Pandas? [https://www.tutorialspoint.com/python_pandas/python_pandas_quick_guide.htm] 
 
 Wieso Python für Data Analytics? (PyData)
+Pandas vs. SQL - kurzer Vergleich?

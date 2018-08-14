@@ -3,6 +3,7 @@
 2d Graph Auslastung (Woche)
 2d Graph Auslastung (Tag)
 Durchschnittliche Fahrtdauer je Jahr
+Gegenüberstellung der Auslastung für beide Jahre in einem Boxplott
 Mappe mit gefärbten Punkten die Stationen zeigen (meisten Abfahrten)
 Mappe mit gefärbten Punkten die Stationen zeigen (meisten Ankünfte)
 Spatial distribution der Fahrräder als Heatmap?(Anzahl pro Docking-Station)
@@ -15,3 +16,4 @@ Mappe mit meistgefahrenen Strecken
 Anzahl der aktiven Subscriber im Sommer vs im Winter
 Wie viele Anwender des Systems benutzen es auf einer täglichen Basis? 
 Einfluss des Wetters auf die Nutzbarkeit des Systems (Wetterdaten?)
+ > Regressionsplot für Wetter und Anzahl der Fahrten

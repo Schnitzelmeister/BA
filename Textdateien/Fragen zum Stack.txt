@@ -1,0 +1,7 @@
+Was ist das Jupyter Notebook und wozu wird es verwendet?
+Warum Seaborn statt Matplotlib? 
+Was ist Pandas und wozu wurde es entwickelt und wozu wird es verwendet?
+In welchen Bereichen wird Pandas verwendet? (finance, economics, Statistics, analytic)
+Was sind die Features von Pandas? [https://www.tutorialspoint.com/python_pandas/python_pandas_quick_guide.htm] 
+
+Wieso Python für Data Analytics? (PyData)

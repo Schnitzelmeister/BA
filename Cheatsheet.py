@@ -38,5 +38,8 @@ df['ValueDate'] = pd.to_datetime(df['ValueDate'])
 # Set the Date as Index
 df.index = df['ValueDate']
 
-#Truncate Date
+#Truncate Date (drops hours minutes and seconds/miliseconds)
 df['starttime'].apply(lambda x: x.date())
+
+#get number of unique values in column
+df['trip_id'].nunique

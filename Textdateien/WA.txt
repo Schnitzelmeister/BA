@@ -132,8 +132,8 @@ Vorgehen bei der Erstellung der BA:
 
 
 ==Fragen an Citybike Wien:
-Wie viele Subscriber hat das System?
-Wie viele LKWs stehen Citybike Wien zur Verfügung? 
+Wie viele Subscriber hat das System? --
+Wie viele LKWs stehen Citybike Wien zur Verfügung? --
 Wie hat sich das System über die Jahre entwickelt? (Anzahl an Stationen am Anfang - Ende / Fahrräder) 
 Was ist das Verhältnis zwischen Subscribern und One-Time nutzern
 Wie wird das System rebalanziert? (Wie oft, Wann, statisch - dynamisch, Welches System)
@@ -147,23 +147,6 @@ Wie wurde Citybike Wien durch die dockless Konkurrenz beeinflusst? Wann wurde of
 Was ist die Uphill Challenge? 
 Wie funktioniert das Ganze in Salzburg? 
 
-Zu visualisieren/untesuchen:
-2d Graph der Auslastung (Mit Jahreszeiten) (Fahrten/Zeit) [Ganzes Datenset]
-2d Graph der Anzahl an Räder im System (Räder/Zeit)
-2d Graph Auslastung (Woche)
-2d Graph Auslastung (Tag)
-Durchschnittliche Fahrtdauer je Jahr
-Mappe mit gefärbten Punkten die Stationen zeigen (meisten Abfahrten)
-Mappe mit gefärbten Punkten die Stationen zeigen (meisten Ankünfte)
-Spatial distribution der Fahrräder als Heatmap?(Anzahl pro Docking-Station)
-Average travel time per bike per day [Understanding the usage of dockless bike sharing in Singapore]
-Landkarte mit Stationen - Stationen verfärben (AnAusgehend/AnEingehend) => Threshold für die klassifizierung
-Landkarte mit Stationen - Stationen werden in [Konsument, Produzent, Ausgeglichen] kategorisiert
-	> Warum Produzent/Konsument/Ausgeglichen - Theoretische Begründung? Topographie miteinbinden
-
-Mappe mit meistgefahrenen Strecken
-Anzahl der aktiven Subscriber im Sommer vs im Winter
-Wie viele Anwender des Systems benutzen es auf einer täglichen Basis? 
 
 
 

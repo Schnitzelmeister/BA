@@ -1,0 +1,9 @@
+Notebook 1:
+Enthält alle relevanten Kennzahlen (keine Visualisierungen)
+
+Notebook 2:
+Enthält alle Visualisierungen (nur Visualisierungen)
+
+Alternativ - ArcGIS - macht das noch einen Sinn? 
+
+

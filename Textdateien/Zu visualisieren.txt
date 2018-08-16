@@ -17,3 +17,13 @@ Anzahl der aktiven Subscriber im Sommer vs im Winter
 Wie viele Anwender des Systems benutzen es auf einer täglichen Basis? 
 Einfluss des Wetters auf die Nutzbarkeit des Systems (Wetterdaten?)
  > Regressionsplot für Wetter und Anzahl der Fahrten
+
+In welchen Abständen nutzt der durchnschnittliche Anwender das System? 
+Trips für 2016 und 2017 konkatenieren und die Auswertung auf beide Jahre auswerten? 
+
+Wie viel Umsatz hat das System generiert? ==> Timedeltas berechnen und Kategorisieren
+
+
+
+
+

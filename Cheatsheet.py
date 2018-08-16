@@ -51,3 +51,15 @@ df['trip_id'].nunique
 fig_size = plt.rcParams["figure.figsize"]
 fig_size[0] = 10.0
 fig_size[1] = 7.0
+
+#Convert Series to DataFrame
+#Die Funktion to_frame returniert ein DataFrame mit dem Spaltennamen count
+series_object.to_frame('SOLL-SpaltenName') 
+
+#Drop column(s) dataframe
+df.drop(['B', 'C'], axis=1)
+
+#Define a Timedelta-Object
+pd.Timedelta('120 sec') 
+
+_________________________MARKDOWN FOR JUPYTER NOTEBOOK_________________________

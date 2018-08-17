@@ -62,4 +62,12 @@ df.drop(['B', 'C'], axis=1)
 #Define a Timedelta-Object
 pd.Timedelta('120 sec') 
 
+#Suppressing Warnings Jupyter
+import warnings
+warnings.filterwarnings('ignore')
+
+#Round up a Float
+import math
+print(math.ceil(4.2))
+
 _________________________MARKDOWN FOR JUPYTER NOTEBOOK_________________________

@@ -70,4 +70,7 @@ warnings.filterwarnings('ignore')
 import math
 print(math.ceil(4.2))
 
+#Convert a column in a DF
+df['column'].astype('category')
+
 _________________________MARKDOWN FOR JUPYTER NOTEBOOK_________________________

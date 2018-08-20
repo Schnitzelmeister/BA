@@ -27,7 +27,7 @@ Wie wurde Citybike Wien durch die dockless Konkurrenz beeinflusst? Wann wurde of
 
 => Wie funktioniert das Ganze in Salzburg? 
 
-=> Wie viel Umsatz hat CBW für die Jahre 2016 und 2017 generiert (Subventionen und Werbeeinnahmen ausgenommen) 
+=> Wie viel Umsatz hat CBW für die Jahre 2016 und 2017 generiert (Subventionen und Werbeeinnahmen ausgenommen) --
 
 ========================================================VISUALISIERUNG========================================================
 => 2d Graph der Auslastung (Mit Jahreszeiten) (Fahrten/Zeit) 

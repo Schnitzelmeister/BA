@@ -30,8 +30,8 @@ Wie wurde Citybike Wien durch die dockless Konkurrenz beeinflusst? Wann wurde of
 => Wie viel Umsatz hat CBW für die Jahre 2016 und 2017 generiert (Subventionen und Werbeeinnahmen ausgenommen) --
 
 ========================================================VISUALISIERUNG========================================================
-=> 2d Graph der Auslastung (Mit Jahreszeiten) (Fahrten/Zeit) 
-    >Gegenüberstellung der Auslastung für beide Jahre in einem Boxplott
+=> 2d Graph der Auslastung (Mit Jahreszeiten) (Fahrten/Zeit)             ----
+    >Gegenüberstellung der Auslastung für beide Jahre in einem Boxplott  ----
 
 => 2d Graph der Anzahl an Räder im System (Räder/Zeit)
 => 2d Graph Auslastung (Woche)
@@ -49,11 +49,15 @@ Landkarte mit Stationen - Stationen werden in [Konsument, Produzent, Ausgegliche
 Mappe mit meistgefahrenen Strecken
 Anzahl der aktiven Subscriber im Sommer vs im Winter
 Wie viele Anwender des Systems benutzen es auf einer täglichen Basis? 
+=== Was ist der durchschnittliche Abstand zwischen den einzelnen Fahrten bei den Kategorien 
+
 Einfluss des Wetters auf die Nutzbarkeit des Systems (Wetterdaten?)
  > Regressionsplot für Wetter und Anzahl der Fahrten
 
-In welchen Abständen nutzt der durchnschnittliche Anwender das System? 
+ 
 Trips für 2016 und 2017 konkatenieren und die Auswertung auf beide Jahre auswerten? 
 
-Wie viel Umsatz hat das System generiert? ==> Timedeltas berechnen und Kategorisieren
+Wie viel Umsatz hat das System generiert? ==> Timedeltas berechnen und Kategorisieren --
+
+________________Folium: Soll die Bibliothek irgendwie in die Arbeit miteingebunden werden? 
 

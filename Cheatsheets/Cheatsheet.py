@@ -73,7 +73,7 @@ warnings.filterwarnings('ignore')
 import math
 print(math.ceil(4.2))
 
-#Convert a column in a DF
+#Convert a column in a category-object
 df['column'].astype('category')
 
 #Group by month using a Grouper
@@ -94,5 +94,5 @@ data_file = open('CityBikeWien/Stationendaten.json', encoding='UTF-8')
 json_dict = json.load(data_file)
 stations_dataframe = pd.DataFrame(json_dict['stations']['station'])
 
-
-
+#Legende zu Plot hinzufügen 
+ax.legend((bars1, bars2), ('2016', '2017'))

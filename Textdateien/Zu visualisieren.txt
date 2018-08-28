@@ -21,7 +21,11 @@ Einfluss des Wetters auf die Nutzbarkeit des Systems (Wetterdaten?)
 In welchen Abständen nutzt der durchnschnittliche Anwender das System? 
 Trips für 2016 und 2017 konkatenieren und die Auswertung auf beide Jahre auswerten? 
 
-Wie viel Umsatz hat das System generiert? ==> Timedeltas berechnen und Kategorisieren
+Wie viel Umsatz hat das System generiert? ==> Timedeltas berechnen und Kategorisieren --
+
+Scatterplot visualisieren
+
+
 
 
 

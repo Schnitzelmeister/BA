@@ -12105,7 +12105,369 @@ memory usage: 115.8+ MB
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><hr/></p>
-<h3 id="Stationendaten-einlesen">Stationendaten einlesen<a class="anchor-link" href="#Stationendaten-einlesen">&#182;</a></h3>
+<h3 id="Kennzahlen-zu-ausgew&#228;hlten-Dimensionen">Kennzahlen zu ausgew&#228;hlten Dimensionen<a class="anchor-link" href="#Kennzahlen-zu-ausgew&#228;hlten-Dimensionen">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><i>Fahrtdauer:</i></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_total_cleansed</span><span class="p">[</span><span class="s1">&#39;Fahrtdauer&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[8]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>count                   1897764
+mean     0 days 00:26:06.235559
+std      0 days 00:48:40.033084
+min      0 days 00:02:00.103000
+25%             0 days 00:09:42
+50%             0 days 00:16:22
+75%             0 days 00:28:21
+max             6 days 08:24:51
+Name: Fahrtdauer, dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><hr/></p>
+<h3 id="Anzahl-der-Fahrten-in-den-bereinigten-Datensets">Anzahl der Fahrten in den bereinigten Datensets<a class="anchor-link" href="#Anzahl-der-Fahrten-in-den-bereinigten-Datensets">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><i>Dimensionen der beiden DataFrames:</i></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df2016</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[9]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(972700, 7)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df2017</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[10]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(925064, 7)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><hr/></p>
+<h3 id="Anzahl-der-Nutzer-je-Jahr-und-Gesamtzeitraum">Anzahl der Nutzer je Jahr und Gesamtzeitraum<a class="anchor-link" href="#Anzahl-der-Nutzer-je-Jahr-und-Gesamtzeitraum">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><i>Anzahl der registrierten Nutzer (bereinigtes Datenset) - 2016:</i></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df2016</span><span class="p">[</span><span class="s1">&#39;Subscriber_ID&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[11]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>134256</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><i>Anzahl der registrierten Nutzer (bereinigtes Datenset) - 2016:</i></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df2017</span><span class="p">[</span><span class="s1">&#39;Subscriber_ID&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[12]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>131663</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><i>Anzahl der registrierten Nutzer (unbereinigtes Datenset) - gesamter Zeitraum:</i></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_total</span><span class="p">[</span><span class="s1">&#39;Subscriber_ID&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[13]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>258719</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><i>Anzahl der registrierten Nutzer (bereinigtes Datenset) - gesamter Zeitraum:</i></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_total_cleansed</span><span class="p">[</span><span class="s1">&#39;Subscriber_ID&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[14]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>227959</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><i>Differenz zwischen bereinigtem und unbereinigtem Datenset in der Anzahl der Subscriber:</i></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_total</span><span class="p">[</span><span class="s1">&#39;Subscriber_ID&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span> <span class="o">-</span> <span class="n">df_total_cleansed</span><span class="p">[</span><span class="s1">&#39;Subscriber_ID&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[15]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>30760</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><hr/></p>
+<h3 id="Stationsdaten-einlesen">Stationsdaten einlesen<a class="anchor-link" href="#Stationsdaten-einlesen">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -12114,7 +12476,7 @@ memory usage: 115.8+ MB
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>In den folgenden Zellen wird eine Datenquelle, welche die einzelnen Stationendaten beinhaltet in ein DataFrame transformiert.</p>
-<p>Die Datenquelle in XML-Format befindet sich unter der offiziellen (?) API unter <a href="http://dynamisch.citybikewien.at/citybike_xml.php">http://dynamisch.citybikewien.at/citybike_xml.php</a> . Da Pandas eigenständig keinen XML-Import unterstützt war es nötig die Daten aus XML in JSON zu transformieren. Hierzu wurde ein öffentlich verfügbarer Dienst verwendet welcher unter der Adresse: <a href="http://www.utilities-online.info/xmltojson">http://www.utilities-online.info/xmltojson</a> zu finden ist.</p>
+<p>Die Datenquelle in XML-Format befindet sich unter der Web-API unter <a href="http://dynamisch.citybikewien.at/citybike_xml.php">http://dynamisch.citybikewien.at/citybike_xml.php</a> . Da Pandas eigenständig keinen XML-Import unterstützt war es zuerst nötig die Daten aus XML in JSON zu transformieren. Hierzu wurde ein öffentlich verfügbarer Dienst verwendet welcher unter der Adresse: <a href="http://www.utilities-online.info/xmltojson">http://www.utilities-online.info/xmltojson</a> zu finden ist.</p>
 <p>Die JSON-Daten werden in einer lokalen Datei gespeichert welche mithilfe der open()-Funktion gelesen werden kann. Es folgt die Transformation des Streams in ein Python-Dictionary welches mithilfe von Pandas in ein DataFrame transformiert wird.</p>
 
 </div>
@@ -12131,7 +12493,7 @@ memory usage: 115.8+ MB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;CityBikeWien/Stationendaten.json&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;UTF-8&#39;</span><span class="p">)</span>  
@@ -12157,7 +12519,7 @@ memory usage: 115.8+ MB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">stations_dataframe</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
@@ -12173,7 +12535,7 @@ memory usage: 115.8+ MB
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[9]:</div>
+<div class="prompt output_prompt">Out[17]:</div>
 
 
 
@@ -12244,10 +12606,10 @@ memory usage: 115.8+ MB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">stations_dataframe</span><span class="p">[</span><span class="s1">&#39;internal_id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">stations_dataframe</span><span class="p">[</span><span class="s1">&#39;internal_id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -12260,7 +12622,7 @@ memory usage: 115.8+ MB
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[10]:</div>
+<div class="prompt output_prompt">Out[18]:</div>
 
 
 
@@ -12286,7 +12648,7 @@ memory usage: 115.8+ MB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">stations_dataframe</span><span class="p">[</span><span class="s1">&#39;boxes&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">stations_dataframe</span><span class="p">[</span><span class="s1">&#39;boxes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;int&#39;</span><span class="p">)</span>
@@ -12304,7 +12666,7 @@ memory usage: 115.8+ MB
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[11]:</div>
+<div class="prompt output_prompt">Out[19]:</div>
 
 
 
@@ -12330,7 +12692,7 @@ memory usage: 115.8+ MB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">stations_dataframe</span><span class="p">[</span><span class="s1">&#39;boxes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
@@ -12346,7 +12708,7 @@ memory usage: 115.8+ MB
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[12]:</div>
+<div class="prompt output_prompt">Out[20]:</div>
 
 
 
@@ -12372,7 +12734,7 @@ memory usage: 115.8+ MB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">stations_dataframe</span><span class="p">[</span><span class="s1">&#39;boxes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
@@ -12388,7 +12750,7 @@ memory usage: 115.8+ MB
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[13]:</div>
+<div class="prompt output_prompt">Out[21]:</div>
 
 
 
@@ -12417,7 +12779,7 @@ memory usage: 115.8+ MB
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><hr/></p>
-<h2 id="Finde-die-ersten-10-Benutzer-nach-Benutzung-f&#252;r-den-gesamten-Zeitraum-(2016+2017)">Finde die ersten 10 Benutzer nach Benutzung f&#252;r den gesamten Zeitraum (2016+2017)<a class="anchor-link" href="#Finde-die-ersten-10-Benutzer-nach-Benutzung-f&#252;r-den-gesamten-Zeitraum-(2016+2017)">&#182;</a></h2>
+<h2 id="Die-ersten-10-Benutzer-nach-Benutzung-f&#252;r-den-gesamten-Zeitraum">Die ersten 10 Benutzer nach Benutzung f&#252;r den gesamten Zeitraum<a class="anchor-link" href="#Die-ersten-10-Benutzer-nach-Benutzung-f&#252;r-den-gesamten-Zeitraum">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -12434,7 +12796,7 @@ memory usage: 115.8+ MB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">grouped_by_subscriber_groups</span>              <span class="o">=</span> <span class="n">df_total</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Subscriber_ID&#39;</span><span class="p">)</span>
@@ -12462,7 +12824,7 @@ memory usage: 115.8+ MB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">aggregated_by_subscriber_dataframe_top_10</span>         <span class="o">=</span> <span class="n">aggregated_by_subscriber_dataframe</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span>
@@ -12482,7 +12844,7 @@ memory usage: 115.8+ MB
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[15]:</div>
+<div class="prompt output_prompt">Out[23]:</div>
 
 
 
@@ -12598,8 +12960,7 @@ memory usage: 115.8+ MB
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Der 'Citybike Wien'-Nutzer welcher das System innerhalb der beiden Jahren am meisten genutzt hat, fuhr insgesamt 1790 Fahrten. Es wäre interessant zu sehen was ihn die Nutzung des Systems über die Zeitdauer der beiden Jahre gekostet hat.</p> 
-<p>Hierfür ist es nötig den Kostenplan von Citybike Wien zu kennen. Dieser ist progressiv eingestellt, das heißt, dass die erste Stunde kostenlos ist. Die zweite Stunde kostet einen Euro, die dritte das doppelte und die vierte Stunde dann vier Euro. Jede weitere Stunde kostet jeweils vier Euro. </p>
+<p>Der 'Citybike Wien'-Nutzer welcher das System innerhalb der beiden Jahren am meisten genutzt hat, fuhr insgesamt 1790 Fahrten. Es wäre interessant zu sehen was ihn die Nutzung des Systems über die Zeitdauer der beiden Jahre gekostet hat.</p>
 </div>
 </div>
 </div>
@@ -12614,7 +12975,7 @@ memory usage: 115.8+ MB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_user_1</span> <span class="o">=</span> <span class="n">df_total</span><span class="p">[</span><span class="n">df_total</span><span class="p">[</span><span class="s1">&#39;Subscriber_ID&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;0x30EF7C4D0C1211B47ADBA3295EF47C61&#39;</span><span class="p">]</span>
@@ -12636,7 +12997,7 @@ memory usage: 115.8+ MB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_user_1</span><span class="p">[</span><span class="n">df_user_1</span><span class="p">[</span><span class="s1">&#39;Fahrtdauer&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timedelta</span><span class="p">(</span><span class="s1">&#39;60 min&#39;</span><span class="p">)]</span><span class="o">.</span><span class="n">size</span>
@@ -12652,7 +13013,7 @@ memory usage: 115.8+ MB
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[17]:</div>
+<div class="prompt output_prompt">Out[25]:</div>
 
 
 
@@ -12678,7 +13039,7 @@ memory usage: 115.8+ MB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_user_1</span><span class="p">[</span><span class="n">df_user_1</span><span class="p">[</span><span class="s1">&#39;Fahrtdauer&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timedelta</span><span class="p">(</span><span class="s1">&#39;120 min&#39;</span><span class="p">)]</span><span class="o">.</span><span class="n">size</span>
@@ -12694,7 +13055,7 @@ memory usage: 115.8+ MB
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[18]:</div>
+<div class="prompt output_prompt">Out[26]:</div>
 
 
 
@@ -12723,17 +13084,7 @@ memory usage: 115.8+ MB
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><hr/></p>
-<h2 id="Welchen-Umsatz-hat-das-System-f&#252;r-das-Jahr-2016-bzw.-2017-durch-Einnahmen-aus-Fahrtpreisen-und-Geb&#252;hren-generiert?">Welchen Umsatz hat das System f&#252;r das Jahr 2016 bzw. 2017 durch Einnahmen aus Fahrtpreisen und Geb&#252;hren generiert?<a class="anchor-link" href="#Welchen-Umsatz-hat-das-System-f&#252;r-das-Jahr-2016-bzw.-2017-durch-Einnahmen-aus-Fahrtpreisen-und-Geb&#252;hren-generiert?">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Der Betreiber von CityBike Wien, die Gewista GmbH wählt ein hybrides Finanzierungsmodell. Das heißt, dass sich das System nicht nur aus den Beiträgen der einzelnen Nutzer finanziert, sondern auch aus Werbungen welche auf den Fahrrädern angezeigt werden.</p>
-<p>Wir untersuchen nun die Einnahmen welche durch die Nutzergemeinde des Systems entsteht. Dies ist durch die Kenntnis des Kostenmodells und der Länge der einzelnen Fahrten möglich. Die Anmeldegebühr von einem Euro wird nicht mit in die Berechnung einbezogen da aus dem Datenset nicht bekannt ist wann sich der Nutzer das erste Mal registriert hat. Somit könnte es sein, dass die Anmeldegebühr nicht in den Jahren 2016 oder 2017 verrechnet wurde.</p>
-
+<h2 id="Welchen-Umsatz-hat-das-System-durch-Nutzerbeitr&#228;ge-erwirtschaftet?">Welchen Umsatz hat das System durch Nutzerbeitr&#228;ge erwirtschaftet?<a class="anchor-link" href="#Welchen-Umsatz-hat-das-System-durch-Nutzerbeitr&#228;ge-erwirtschaftet?">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -12748,7 +13099,7 @@ memory usage: 115.8+ MB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">calculate_fare</span><span class="p">(</span><span class="n">fahrtdauer</span><span class="p">):</span>
@@ -12788,7 +13139,7 @@ memory usage: 115.8+ MB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df2016</span><span class="p">[</span><span class="s1">&#39;Fahrtpreis&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df2016</span><span class="p">[</span><span class="s1">&#39;Fahrtdauer&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">calculate_fare</span><span class="p">)</span>
@@ -12807,18 +13158,6 @@ memory usage: 115.8+ MB
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Außerdem verrechnet der Betreiber von CityBike Wien eine Gebühr von 20 Euro sollte der Nutzer das Fahrrad nicht an einer 
-Docking-Station returnieren. Fahrten die nicht an einer spezifischen Docking-Station enden werden mit der Endstation_ID<br>
-'11' markiert.</p>
-<p>Hierfür spricht die Tatsache, dass alle Fahrten/Entleihungen bei denen ein Fahrrad entwendet wurde in der Endstation '11' enden. (Siehe folgenden Abschnitt)</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <p><i>Eine Station mit der ID '11' ist in der Liste der Stationen nicht zu finden:</i></p>
 
 </div>
@@ -12826,7 +13165,7 @@ Docking-Station returnieren. Fahrten die nicht an einer spezifischen Docking-Sta
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">stations_dataframe</span><span class="p">[(</span><span class="n">stations_dataframe</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span><span class="o">==</span><span class="mi">11</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">stations_dataframe</span><span class="p">[</span><span class="s1">&#39;internal_id&#39;</span><span class="p">]</span><span class="o">==</span><span class="mi">11</span><span class="p">)]</span><span class="o">.</span><span class="n">size</span>
@@ -12842,7 +13181,7 @@ Docking-Station returnieren. Fahrten die nicht an einer spezifischen Docking-Sta
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[21]:</div>
+<div class="prompt output_prompt">Out[29]:</div>
 
 
 
@@ -12861,7 +13200,7 @@ Docking-Station returnieren. Fahrten die nicht an einer spezifischen Docking-Sta
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Daher gilt es noch eine zusätzliche Spalte namens 'Gebuehr' zum DataFrame hinzuzufügen. Diese kann die Werte 0 oder 20 beinhalten und gibt an ob ein Fahrrad wie vorgeschrieben an eine Docking-Station returniert wurde.</p>
+<p>Daher gilt es noch eine zusätzliche Spalte namens 'Gebuehr' zum DataFrame hinzuzufügen. Diese kann die Werte 0 oder 20 beinhalten und gibt an ob ein Fahrrad ordnungsgemäß an einer Docking-Station returniert wurde.</p>
 
 </div>
 </div>
@@ -12877,7 +13216,7 @@ Docking-Station returnieren. Fahrten die nicht an einer spezifischen Docking-Sta
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df2016</span><span class="p">[</span><span class="s1">&#39;Gebuehr&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df2016</span><span class="p">[</span><span class="s1">&#39;Endstation_ID&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">calculate_fee</span><span class="p">)</span>
@@ -12903,7 +13242,7 @@ Docking-Station returnieren. Fahrten die nicht an einer spezifischen Docking-Sta
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df2016</span><span class="p">[</span><span class="s1">&#39;Fahrtpreis&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">+</span> <span class="n">df2016</span><span class="p">[</span><span class="s1">&#39;Gebuehr&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
@@ -12919,7 +13258,7 @@ Docking-Station returnieren. Fahrten die nicht an einer spezifischen Docking-Sta
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[23]:</div>
+<div class="prompt output_prompt">Out[31]:</div>
 
 
 
@@ -12945,7 +13284,7 @@ Docking-Station returnieren. Fahrten die nicht an einer spezifischen Docking-Sta
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df2017</span><span class="p">[</span><span class="s1">&#39;Fahrtpreis&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">+</span> <span class="n">df2017</span><span class="p">[</span><span class="s1">&#39;Gebuehr&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
@@ -12961,7 +13300,7 @@ Docking-Station returnieren. Fahrten die nicht an einer spezifischen Docking-Sta
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[24]:</div>
+<div class="prompt output_prompt">Out[32]:</div>
 
 
 
@@ -12980,8 +13319,53 @@ Docking-Station returnieren. Fahrten die nicht an einer spezifischen Docking-Sta
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><i>Relativer Anteil an kostenpflichtigen Fahrten (Gesamtzeitraum):</i></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">no_chargeable_rides</span> <span class="o">=</span> <span class="n">df_total_cleansed</span><span class="p">[</span><span class="n">df_total_cleansed</span><span class="p">[</span><span class="s1">&#39;Fahrtpreis&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">][</span><span class="s1">&#39;Fahrtpreis&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+<span class="n">no_free_rides</span>       <span class="o">=</span> <span class="n">df_total_cleansed</span><span class="p">[</span><span class="n">df_total_cleansed</span><span class="p">[</span><span class="s1">&#39;Fahrtpreis&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">][</span><span class="s1">&#39;Fahrtpreis&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+
+<span class="n">no_chargeable_rides</span><span class="o">/</span><span class="n">no_free_rides</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[54]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0.07683699942574262</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p><hr/></p>
-<h2 id="Wie-viele-Fahrr&#228;der-wurden-2016/2017-entwendet?">Wie viele Fahrr&#228;der wurden 2016/2017 entwendet?<a class="anchor-link" href="#Wie-viele-Fahrr&#228;der-wurden-2016/2017-entwendet?">&#182;</a></h2>
+<h2 id="Wie-viele-Fahrr&#228;der-wurden-entwendet?">Wie viele Fahrr&#228;der wurden entwendet?<a class="anchor-link" href="#Wie-viele-Fahrr&#228;der-wurden-entwendet?">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -13016,7 +13400,7 @@ Docking-Station returnieren. Fahrten die nicht an einer spezifischen Docking-Sta
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df2016</span><span class="p">[</span><span class="n">df2016</span><span class="p">[</span><span class="s1">&#39;Fahrtdauer&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timedelta</span><span class="p">(</span><span class="s1">&#39;7200 min&#39;</span><span class="p">)]</span>
@@ -13032,7 +13416,7 @@ Docking-Station returnieren. Fahrten die nicht an einer spezifischen Docking-Sta
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[25]:</div>
+<div class="prompt output_prompt">Out[33]:</div>
 
 
 
@@ -13142,8 +13526,8 @@ Docking-Station returnieren. Fahrten die nicht an einer spezifischen Docking-Sta
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Die Fahrräder mit den IDs: 3392, 3191, 1948, 2190 wurden nach dem Enddatum im System nicht wieder benutzt, somit können wir davon ausgehen, dass diese entwendet wurden. Das Fahrrad mit der ID: 1982 taucht im System wieder auf. Der Nutzer hat die Frist von 120 Stunden überschritten. In diesem Fall fällt die Pauschale von 600 Euro an. Für diese Berechnung wird davon ausgegangen, dass die Kosten für die Überschreitung der maximalen Frist die gleichen sind wie im Falle, dass ein Fahrrad entwendet wird.</p>
-<p>Interessanterweise wurden die Fahrräder mit den IDs 3392 und 3191 von der gleichen Person ausgeliehen und darauffolgends entwendet.</p>
+<p>Die Fahrräder mit den IDs: 3392, 3191, 1948, 2190 wurden nach dem Enddatum im System nicht wieder benutzt, somit können wir davon ausgehen, dass diese entwendet wurden. Das Fahrrad mit der ID: 1982 taucht im System wieder auf. Der Nutzer hat die Frist von 120 Stunden überschritten wodurch die Pauschale von 600 Euro anfällt. Für diese Berechnung wird davon ausgegangen, dass die Kosten für die Überschreitung der maximalen Frist die gleichen sind wie im Falle, dass ein Fahrrad entwendet wird.</p>
+<p>Interessanterweise wurden die Fahrräder mit den IDs 3392 und 3191 von der Person mit der gleichen Subscriber_ID ausgeliehen und darauffolgends offensichtlich nicht returniert. Eine Person kann mit einer Karte ein Fahrrad zu einem Zeitpunkt verwenden, es könnte allerdings sein, dass der Kunde eine Partnerkarte verwendet hat.</p>
 
 </div>
 </div>
@@ -13152,7 +13536,7 @@ Docking-Station returnieren. Fahrten die nicht an einer spezifischen Docking-Sta
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><u>Somit wurden 2016 vier Fahrräder entwendet</u></p>
+<p><u>Nach den oben genannten Daten scheint es, dass insgesamt vier Fahrräder entwendet wurden.</u></p>
 
 </div>
 </div>
@@ -13169,10 +13553,10 @@ Docking-Station returnieren. Fahrten die nicht an einer spezifischen Docking-Sta
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df2017</span><span class="p">[</span><span class="n">df2017</span><span class="p">[</span><span class="s1">&#39;Fahrtdauer&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timedelta</span><span class="p">(</span><span class="s1">&#39;7200 min&#39;</span><span class="p">)]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df2017</span><span class="p">[</span><span class="n">df2017</span><span class="p">[</span><span class="s1">&#39;Fahrtdauer&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timedelta</span><span class="p">(</span><span class="s1">&#39;7200 min&#39;</span><span class="p">)]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Startdatum&#39;</span><span class="p">])</span>
 </pre></div>
 
 </div>
@@ -13185,7 +13569,7 @@ Docking-Station returnieren. Fahrten die nicht an einer spezifischen Docking-Sta
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[26]:</div>
+<div class="prompt output_prompt">Out[50]:</div>
 
 
 
@@ -13218,10 +13602,22 @@ Docking-Station returnieren. Fahrten die nicht an einer spezifischen Docking-Sta
       <th>Fahrtpreis</th>
       <th>Gebuehr</th>
     </tr>
+    <tr>
+      <th>Startdatum</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
   </thead>
   <tbody>
     <tr>
-      <th>16034</th>
+      <th>2017-01-18 20:54:05</th>
       <td>2017-01-18 20:54:05</td>
       <td>2017-01-25 05:14:14</td>
       <td>1054</td>
@@ -13233,7 +13629,7 @@ Docking-Station returnieren. Fahrten die nicht an einer spezifischen Docking-Sta
       <td>20</td>
     </tr>
     <tr>
-      <th>19124</th>
+      <th>2017-04-05 03:35:45</th>
       <td>2017-04-05 03:35:45</td>
       <td>2017-04-11 11:51:48</td>
       <td>1112</td>
@@ -13245,7 +13641,19 @@ Docking-Station returnieren. Fahrten die nicht an einer spezifischen Docking-Sta
       <td>20</td>
     </tr>
     <tr>
-      <th>22298</th>
+      <th>2017-05-05 18:37:44</th>
+      <td>2017-05-05 18:37:44</td>
+      <td>2017-05-11 18:35:36</td>
+      <td>1140</td>
+      <td>1044</td>
+      <td>3640</td>
+      <td>0x7A6B8C49112A4CAD9D873101D28EAFE0</td>
+      <td>5 days 23:57:52</td>
+      <td>600.0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2017-05-21 01:18:01</th>
       <td>2017-05-21 01:18:01</td>
       <td>2017-05-27 09:34:32</td>
       <td>1025</td>
@@ -13257,67 +13665,7 @@ Docking-Station returnieren. Fahrten die nicht an einer spezifischen Docking-Sta
       <td>20</td>
     </tr>
     <tr>
-      <th>28927</th>
-      <td>2017-08-27 02:08:03</td>
-      <td>2017-09-02 10:19:44</td>
-      <td>1055</td>
-      <td>11</td>
-      <td>3157</td>
-      <td>0xB60B30694F42EA56652BEFEA6A3BD249</td>
-      <td>6 days 08:11:41</td>
-      <td>600.0</td>
-      <td>20</td>
-    </tr>
-    <tr>
-      <th>29801</th>
-      <td>2017-09-20 13:42:46</td>
-      <td>2017-09-26 21:57:17</td>
-      <td>1145</td>
-      <td>11</td>
-      <td>55</td>
-      <td>0x3F2B5608F8E8A6B9DD556CECFA87E3FC</td>
-      <td>6 days 08:14:31</td>
-      <td>600.0</td>
-      <td>20</td>
-    </tr>
-    <tr>
-      <th>30038</th>
-      <td>2017-09-29 11:19:42</td>
-      <td>2017-10-05 19:33:43</td>
-      <td>1077</td>
-      <td>11</td>
-      <td>2065</td>
-      <td>0x17779C3C345DE2E12172556CF244EFE3</td>
-      <td>6 days 08:14:01</td>
-      <td>600.0</td>
-      <td>20</td>
-    </tr>
-    <tr>
-      <th>30047</th>
-      <td>2017-09-29 14:31:20</td>
-      <td>2017-10-05 22:49:35</td>
-      <td>1115</td>
-      <td>11</td>
-      <td>2271</td>
-      <td>0x1E10D94BEEB562ADCC948444A85FE9BF</td>
-      <td>6 days 08:18:15</td>
-      <td>600.0</td>
-      <td>20</td>
-    </tr>
-    <tr>
-      <th>31389</th>
-      <td>2017-12-09 02:07:45</td>
-      <td>2017-12-15 10:29:34</td>
-      <td>1075</td>
-      <td>11</td>
-      <td>2798</td>
-      <td>0x2F27BFD4FC7D8FEC7E302C5339CC63F5</td>
-      <td>6 days 08:21:49</td>
-      <td>600.0</td>
-      <td>20</td>
-    </tr>
-    <tr>
-      <th>196136</th>
+      <th>2017-07-22 02:52:42</th>
       <td>2017-07-22 02:52:42</td>
       <td>2017-07-27 10:57:33</td>
       <td>1124</td>
@@ -13329,16 +13677,64 @@ Docking-Station returnieren. Fahrten die nicht an einer spezifischen Docking-Sta
       <td>0</td>
     </tr>
     <tr>
-      <th>310575</th>
-      <td>2017-05-05 18:37:44</td>
-      <td>2017-05-11 18:35:36</td>
-      <td>1140</td>
-      <td>1044</td>
-      <td>3640</td>
-      <td>0x7A6B8C49112A4CAD9D873101D28EAFE0</td>
-      <td>5 days 23:57:52</td>
+      <th>2017-08-27 02:08:03</th>
+      <td>2017-08-27 02:08:03</td>
+      <td>2017-09-02 10:19:44</td>
+      <td>1055</td>
+      <td>11</td>
+      <td>3157</td>
+      <td>0xB60B30694F42EA56652BEFEA6A3BD249</td>
+      <td>6 days 08:11:41</td>
       <td>600.0</td>
-      <td>0</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <th>2017-09-20 13:42:46</th>
+      <td>2017-09-20 13:42:46</td>
+      <td>2017-09-26 21:57:17</td>
+      <td>1145</td>
+      <td>11</td>
+      <td>55</td>
+      <td>0x3F2B5608F8E8A6B9DD556CECFA87E3FC</td>
+      <td>6 days 08:14:31</td>
+      <td>600.0</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <th>2017-09-29 11:19:42</th>
+      <td>2017-09-29 11:19:42</td>
+      <td>2017-10-05 19:33:43</td>
+      <td>1077</td>
+      <td>11</td>
+      <td>2065</td>
+      <td>0x17779C3C345DE2E12172556CF244EFE3</td>
+      <td>6 days 08:14:01</td>
+      <td>600.0</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <th>2017-09-29 14:31:20</th>
+      <td>2017-09-29 14:31:20</td>
+      <td>2017-10-05 22:49:35</td>
+      <td>1115</td>
+      <td>11</td>
+      <td>2271</td>
+      <td>0x1E10D94BEEB562ADCC948444A85FE9BF</td>
+      <td>6 days 08:18:15</td>
+      <td>600.0</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <th>2017-12-09 02:07:45</th>
+      <td>2017-12-09 02:07:45</td>
+      <td>2017-12-15 10:29:34</td>
+      <td>1075</td>
+      <td>11</td>
+      <td>2798</td>
+      <td>0x2F27BFD4FC7D8FEC7E302C5339CC63F5</td>
+      <td>6 days 08:21:49</td>
+      <td>600.0</td>
+      <td>20</td>
     </tr>
   </tbody>
 </table>
@@ -13356,15 +13752,7 @@ Docking-Station returnieren. Fahrten die nicht an einer spezifischen Docking-Sta
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><hr/></p>
-<h2 id="Visualisierung-der-Daten">Visualisierung der Daten<a class="anchor-link" href="#Visualisierung-der-Daten">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Was-ist-das-Verh&#228;ltnis-zwischen-einmaligen-Benutzern-und-regelm&#228;&#223;igen-Nutzern-(2016+2017)">Was ist das Verh&#228;ltnis zwischen einmaligen Benutzern und regelm&#228;&#223;igen Nutzern (2016+2017)<a class="anchor-link" href="#Was-ist-das-Verh&#228;ltnis-zwischen-einmaligen-Benutzern-und-regelm&#228;&#223;igen-Nutzern-(2016+2017)">&#182;</a></h3>
+<h2 id="Kategorisierung-der-Nutzer-nach-Verwendungsh&#228;ufigkeit-f&#252;r-beide-Jahre">Kategorisierung der Nutzer nach Verwendungsh&#228;ufigkeit f&#252;r beide Jahre<a class="anchor-link" href="#Kategorisierung-der-Nutzer-nach-Verwendungsh&#228;ufigkeit-f&#252;r-beide-Jahre">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -13379,7 +13767,7 @@ Docking-Station returnieren. Fahrten die nicht an einer spezifischen Docking-Sta
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_total_groups</span> <span class="o">=</span> <span class="n">df_total_cleansed</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Subscriber_ID&#39;</span><span class="p">)</span>
@@ -13398,14 +13786,14 @@ Docking-Station returnieren. Fahrten die nicht an einer spezifischen Docking-Sta
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><i>Danach gilt es eine Funktion zu Kategorisierungszwecken zu definieren damit man die Nutzer Kategorien nach Anzahl der unternommenen Fahrten einteilen kann: </i></p>
+<p><i>Danach gilt es eine Funktion zu Kategorisierungszwecken zu definieren damit man die Nutzer in Kategorien nach Anzahl der unternommenen Fahrten einteilen kann: </i></p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">categorize</span><span class="p">(</span><span class="n">number_trips</span><span class="p">):</span>
@@ -13430,15 +13818,15 @@ Docking-Station returnieren. Fahrten die nicht an einer spezifischen Docking-Sta
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Die Funktion wird auf die Spalte 'ANZAHL_FAHRTEN' angewendet wodurch eine neue Spalte namens 'Kategorie' entsteht.</p>
-<p>Nach Erstellung der Spalte 'Kategorie' wird diese gruppiert und die Anzahl der Subscriber innerhalb dieser Gruppen wird mithilfe np.size in ein DataFrame aggregiert. Dieses DataFrame wird zu Visualisierungszwecken in ein Series-Objekt transformiert.</p>
+<p><i>Die Funktion wird auf die Spalte 'ANZAHL_FAHRTEN' angewendet wodurch eine neue Spalte namens 'Kategorie' entsteht.</p>
+<p>Nach Erstellung der Spalte 'Kategorie' wird diese gruppiert und die Anzahl der Subscriber innerhalb dieser Gruppen wird mithilfe np.size in ein DataFrame aggregiert. Dieses DataFrame wird zu Visualisierungszwecken in ein Series-Objekt transformiert.&lt;/i&gt;</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">aggregated_by_subscriber_dataframe</span><span class="p">[</span><span class="s1">&#39;Kategorie&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">aggregated_by_subscriber_dataframe</span><span class="p">[</span><span class="s1">&#39;ANZAHL_FAHRTEN&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">categorize</span><span class="p">)</span>
@@ -13461,14 +13849,107 @@ Docking-Station returnieren. Fahrten die nicht an einer spezifischen Docking-Sta
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><i>Nachdem die transformierten Daten zur Verfügung stehen, werden diese visualisiert:</i></p>
+<p><i>Anzahl von Nutzer je Kategorie</i></p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">aggregated_by_category_series</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[38]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Kategorie
+A     74545
+B    116990
+C     30385
+D      3939
+E      2100
+Name: ANZAHL_FAHRTEN, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><i>Anteil je Kategorie in Prozent:</i></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">aggregated_by_category_series</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">/</span><span class="n">aggregated_by_category_series</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0.3270105589162964
+0.5132063221895166
+0.13329151294750372
+0.0172794230541457
+0.009212182892537692
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><i>Visualisierung mithilfe eines Balkendiagramms:</i></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
@@ -13480,10 +13961,10 @@ Docking-Station returnieren. Fahrten die nicht an einer spezifischen Docking-Sta
 
 <span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">aggregated_by_category_series</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">aggregated_by_category_series</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.9</span> <span class="p">)</span>
 
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Kategorie&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Nutzeranzahl&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Anzahl: Fahrten&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Anzahl: Nutzer&#39;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="s1">&#39;horizontal&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Nutzer nach Verwendung&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Anzahl an Nutzern nach Verwendungsaufkommen&#39;</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
@@ -13504,7 +13985,7 @@ Docking-Station returnieren. Fahrten die nicht an einer spezifischen Docking-Sta
 
 
 <div class="output_png output_subarea ">
-<img src="data:image/png;base64,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
+<img src="data:image/png;base64,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
 "
 >
 </div>
@@ -13528,6 +14009,7 @@ Docking-Station returnieren. Fahrten die nicht an einer spezifischen Docking-Sta
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><hr/></p>
 <h2 id="Was-ist-die-Auslastung-des-Systems-nach-Monat-und-Jahr?">Was ist die Auslastung des Systems nach Monat und Jahr?<a class="anchor-link" href="#Was-ist-die-Auslastung-des-Systems-nach-Monat-und-Jahr?">&#182;</a></h2>
 </div>
 </div>
@@ -13543,7 +14025,7 @@ Docking-Station returnieren. Fahrten die nicht an einer spezifischen Docking-Sta
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df2016_copy</span> <span class="o">=</span> <span class="n">df2016</span>
@@ -13566,7 +14048,7 @@ Docking-Station returnieren. Fahrten die nicht an einer spezifischen Docking-Sta
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df2016_copy</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">df2016_copy</span><span class="p">[</span><span class="s1">&#39;Startdatum&#39;</span><span class="p">]</span> 
@@ -13589,7 +14071,7 @@ Docking-Station returnieren. Fahrten die nicht an einer spezifischen Docking-Sta
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df2016_grouped_month</span> <span class="o">=</span> <span class="n">df2016</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">Grouper</span><span class="p">(</span><span class="n">freq</span><span class="o">=</span><span class="s1">&#39;M&#39;</span><span class="p">))</span>
@@ -13598,7 +14080,7 @@ Docking-Station returnieren. Fahrten die nicht an einer spezifischen Docking-Sta
 
 <span class="n">aggregated_by_month_2016</span> <span class="o">=</span> <span class="n">aggregated_by_month_2016_dataframe</span><span class="p">[</span><span class="s1">&#39;Startdatum&#39;</span><span class="p">]</span>
 
-<span class="n">agg_sechzehn</span> <span class="o">=</span> <span class="n">aggregated_by_month_2016</span><span class="o">.</span><span class="n">to_frame</span><span class="p">(</span><span class="s1">&#39;Anzahl_Fahrten_Monat&#39;</span><span class="p">)</span>
+<span class="n">agg_sixteen</span> <span class="o">=</span> <span class="n">aggregated_by_month_2016</span><span class="o">.</span><span class="n">to_frame</span><span class="p">(</span><span class="s1">&#39;Anzahl_Fahrten_Monat&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -13617,7 +14099,7 @@ Docking-Station returnieren. Fahrten die nicht an einer spezifischen Docking-Sta
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df2017_grouped_month</span> <span class="o">=</span> <span class="n">df2017</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">Grouper</span><span class="p">(</span><span class="n">freq</span><span class="o">=</span><span class="s1">&#39;M&#39;</span><span class="p">))</span>
@@ -13626,7 +14108,7 @@ Docking-Station returnieren. Fahrten die nicht an einer spezifischen Docking-Sta
 
 <span class="n">aggregated_by_month_2017</span> <span class="o">=</span> <span class="n">aggregated_by_month_2017_dataframe</span><span class="p">[</span><span class="s1">&#39;Startdatum&#39;</span><span class="p">]</span>
 
-<span class="n">agg_siebzehn</span> <span class="o">=</span> <span class="n">aggregated_by_month_2017</span><span class="o">.</span><span class="n">to_frame</span><span class="p">(</span><span class="s1">&#39;Anzahl_Fahrten_Monat&#39;</span><span class="p">)</span>
+<span class="n">agg_seventeen</span> <span class="o">=</span> <span class="n">aggregated_by_month_2017</span><span class="o">.</span><span class="n">to_frame</span><span class="p">(</span><span class="s1">&#39;Anzahl_Fahrten_Monat&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -13645,11 +14127,11 @@ Docking-Station returnieren. Fahrten die nicht an einer spezifischen Docking-Sta
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">agg_sechzehn_series</span>  <span class="o">=</span> <span class="n">agg_sechzehn</span><span class="p">[</span><span class="s1">&#39;Anzahl_Fahrten_Monat&#39;</span><span class="p">]</span>
-<span class="n">agg_siebzehn_series</span>  <span class="o">=</span> <span class="n">agg_siebzehn</span><span class="p">[</span><span class="s1">&#39;Anzahl_Fahrten_Monat&#39;</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">agg_sixteen_series</span>    <span class="o">=</span> <span class="n">agg_sixteen</span><span class="p">[</span><span class="s1">&#39;Anzahl_Fahrten_Monat&#39;</span><span class="p">]</span>
+<span class="n">agg_seventeen_series</span>  <span class="o">=</span> <span class="n">agg_seventeen</span><span class="p">[</span><span class="s1">&#39;Anzahl_Fahrten_Monat&#39;</span><span class="p">]</span>
 </pre></div>
 
 </div>
@@ -13668,7 +14150,7 @@ Docking-Station returnieren. Fahrten die nicht an einer spezifischen Docking-Sta
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">fig_size</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s2">&quot;figure.figsize&quot;</span><span class="p">]</span>
@@ -13680,10 +14162,10 @@ Docking-Station returnieren. Fahrten die nicht an einer spezifischen Docking-Sta
 
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
 <span class="n">index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
-<span class="n">bar_breite</span> <span class="o">=</span> <span class="mf">0.4</span>
+<span class="n">bar_width</span> <span class="o">=</span> <span class="mf">0.4</span>
 
-<span class="n">bars1</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">agg_sechzehn_series</span><span class="p">,</span> <span class="n">bar_breite</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
-<span class="n">bars2</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">index</span><span class="o">+</span><span class="n">bar_breite</span><span class="p">,</span> <span class="n">agg_siebzehn_series</span><span class="p">,</span> <span class="n">bar_breite</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">)</span>
+<span class="n">bars1</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">agg_sixteen_series</span><span class="p">,</span> <span class="n">bar_breite</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
+<span class="n">bars2</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">index</span><span class="o">+</span><span class="n">bar_breite</span><span class="p">,</span> <span class="n">agg_seventeen_series</span><span class="p">,</span> <span class="n">bar_width</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">)</span>
 
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">index</span> <span class="o">+</span> <span class="n">bar_breite</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Gegenüberstellung für 2016 und 2017&#39;</span><span class="p">)</span>
@@ -13725,105 +14207,126 @@ Docking-Station returnieren. Fahrten die nicht an einer spezifischen Docking-Sta
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Statistische-Kennzahlen-zur-Fahrtdauer">Statistische Kennzahlen zur Fahrtdauer<a class="anchor-link" href="#Statistische-Kennzahlen-zur-Fahrtdauer">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_total_cleansed</span><span class="p">[</span><span class="s1">&#39;Fahrtdauer&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[37]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>count                   1897764
-mean     0 days 00:26:06.235559
-std      0 days 00:48:40.033084
-min      0 days 00:02:00.103000
-25%             0 days 00:09:42
-50%             0 days 00:16:22
-75%             0 days 00:28:21
-max             6 days 08:24:51
-Name: Fahrtdauer, dtype: object</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Statistische-Kennzahlen-zum-Fahrtpreis-2016-bei-Fahrten-die-mehr-als-7-Euro-gekostet-haben">Statistische Kennzahlen zum Fahrtpreis 2016 bei Fahrten die mehr als 7 Euro gekostet haben<a class="anchor-link" href="#Statistische-Kennzahlen-zum-Fahrtpreis-2016-bei-Fahrten-die-mehr-als-7-Euro-gekostet-haben">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df2016</span><span class="p">[</span><span class="n">df2016</span><span class="p">[</span><span class="s1">&#39;Fahrtpreis&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">7</span><span class="p">][</span><span class="s1">&#39;Fahrtpreis&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[38]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>count    4220.000000
-mean       18.635308
-std        28.181630
-min        11.000000
-25%        11.000000
-50%        15.000000
-75%        19.000000
-max       600.000000
-Name: Fahrtpreis, dtype: float64</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
+<p><hr/></p>
 <h2 id="Wie-korrelieren-die-Daten-miteinander?">Wie korrelieren die Daten miteinander?<a class="anchor-link" href="#Wie-korrelieren-die-Daten-miteinander?">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_total_cleansed</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[49]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Anfangsstation_ID</th>
+      <th>Endstation_ID</th>
+      <th>Fahrrad_ID</th>
+      <th>Fahrtpreis</th>
+      <th>Gebuehr</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Anfangsstation_ID</th>
+      <td>1.000000</td>
+      <td>0.014017</td>
+      <td>0.006181</td>
+      <td>-0.004173</td>
+      <td>-0.001077</td>
+    </tr>
+    <tr>
+      <th>Endstation_ID</th>
+      <td>0.014017</td>
+      <td>1.000000</td>
+      <td>0.005754</td>
+      <td>-0.059788</td>
+      <td>-0.420607</td>
+    </tr>
+    <tr>
+      <th>Fahrrad_ID</th>
+      <td>0.006181</td>
+      <td>0.005754</td>
+      <td>1.000000</td>
+      <td>-0.004994</td>
+      <td>-0.001706</td>
+    </tr>
+    <tr>
+      <th>Fahrtpreis</th>
+      <td>-0.004173</td>
+      <td>-0.059788</td>
+      <td>-0.004994</td>
+      <td>1.000000</td>
+      <td>0.137930</td>
+    </tr>
+    <tr>
+      <th>Gebuehr</th>
+      <td>-0.001077</td>
+      <td>-0.420607</td>
+      <td>-0.001706</td>
+      <td>0.137930</td>
+      <td>1.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><u>Keine signifikante Korrelation<u/></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><hr/></p>
+<h2 id="Verteilung-der-Fahrtdauer">Verteilung der Fahrtdauer<a class="anchor-link" href="#Verteilung-der-Fahrtdauer">&#182;</a></h2>
 </div>
 </div>
 </div>

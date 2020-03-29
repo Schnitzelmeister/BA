@@ -1,6 +1,0 @@
-==> Tabelle der Umweltfaktoren erstellen
-==> Text generieren: Den bestehenden Fortschritt und Erkenntnisse in den theoretischen Teil der Arbeit einfließen lassen
-==> Bestehendes Notebook esthetisch anpassen (Esthetische korrekturen - Inhalt bleibt unverändert)
-
-==> Nach diesen Schritten ist der Umfang des generierten Inhaltes 
-    zu untersuchen und die weiteren Schritte zu definieren: Wieviel muss noch gemacht werden, welche Grafiken sollen noch erstellt werden?
